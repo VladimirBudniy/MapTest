@@ -34,7 +34,6 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
     
     private func loadAnnotation(with model: ReverseGeocoding) {
         self.rootView.addAnnotationView(model: model)
-//        self.rootView.addAnnotation(model)
     }
     
     @objc private func handleLongPress(gestureReconizer: UILongPressGestureRecognizer) {
@@ -42,6 +41,10 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
             let coordinate = self.rootView.getCurrentPoint(gestureReconizer: gestureReconizer)
             ReverseGeocoding.geocodeModel(coordinate, handler: loadAnnotation)
         }
+    }
+    
+    @IBAction func onCancelAnnotationView(_ sender: Any) {
+        self.rootView.dismissAnnotationView()
     }
 
 }

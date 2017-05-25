@@ -17,7 +17,7 @@
 		CF90BD401ED489F600735774 /* ViewControllerRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD3F1ED489F600735774 /* ViewControllerRootView.swift */; };
 		CF90BD441ED48A6200735774 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD431ED48A6200735774 /* MapViewController.swift */; };
 		CF90BD461ED48AA600735774 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD451ED48AA600735774 /* MapView.swift */; };
-		CF9A44981ED58B770069BCA4 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A44971ED58B770069BCA4 /* Annotation.swift */; };
+		CF94020B1ED6B1EA0019BF06 /* UINib+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94020A1ED6B1EA0019BF06 /* UINib+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		CF90BD3F1ED489F600735774 /* ViewControllerRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRootView.swift; sourceTree = "<group>"; };
 		CF90BD431ED48A6200735774 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CF90BD451ED48AA600735774 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		CF9A44971ED58B770069BCA4 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		CF94020A1ED6B1EA0019BF06 /* UINib+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				CF4B384B1ED5BC9E00F7D794 /* ReverseGeocoding */,
-				CF9A44961ED58B6F0069BCA4 /* Annotation */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,16 +157,17 @@
 		CF90BD471ED48C8F00735774 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CF9402091ED6B1E90019BF06 /* UINib */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		CF9A44961ED58B6F0069BCA4 /* Annotation */ = {
+		CF9402091ED6B1E90019BF06 /* UINib */ = {
 			isa = PBXGroup;
 			children = (
-				CF9A44971ED58B770069BCA4 /* Annotation.swift */,
+				CF94020A1ED6B1EA0019BF06 /* UINib+Extensions.swift */,
 			);
-			path = Annotation;
+			path = UINib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,8 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF90BD291ED4882200735774 /* AppDelegate.swift in Sources */,
-				CF9A44981ED58B770069BCA4 /* Annotation.swift in Sources */,
 				CF4B384D1ED5BCAB00F7D794 /* ReverseGeocoding.swift in Sources */,
+				CF94020B1ED6B1EA0019BF06 /* UINib+Extensions.swift in Sources */,
 				CF4B38501ED5C8F900F7D794 /* AnnotationView.swift in Sources */,
 				CF90BD461ED48AA600735774 /* MapView.swift in Sources */,
 				CF90BD401ED489F600735774 /* ViewControllerRootView.swift in Sources */,
