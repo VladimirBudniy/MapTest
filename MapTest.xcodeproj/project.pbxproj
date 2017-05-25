@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CF4B384D1ED5BCAB00F7D794 /* ReverseGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B384C1ED5BCAB00F7D794 /* ReverseGeocoding.swift */; };
 		CF4B38501ED5C8F900F7D794 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B384F1ED5C8F900F7D794 /* AnnotationView.swift */; };
-		CF4B38521ED5C90100F7D794 /* AnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4B38511ED5C90100F7D794 /* AnnotationView.xib */; };
 		CF90BD291ED4882200735774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD281ED4882200735774 /* AppDelegate.swift */; };
 		CF90BD2E1ED4882200735774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF90BD2C1ED4882200735774 /* Main.storyboard */; };
 		CF90BD301ED4882200735774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF90BD2F1ED4882200735774 /* Assets.xcassets */; };
@@ -18,12 +17,16 @@
 		CF90BD441ED48A6200735774 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD431ED48A6200735774 /* MapViewController.swift */; };
 		CF90BD461ED48AA600735774 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD451ED48AA600735774 /* MapView.swift */; };
 		CF94020B1ED6B1EA0019BF06 /* UINib+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94020A1ED6B1EA0019BF06 /* UINib+Extensions.swift */; };
+		CF94020E1ED6C5390019BF06 /* DetailAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94020D1ED6C5390019BF06 /* DetailAnnotationView.swift */; };
+		CF9402101ED6C5620019BF06 /* DetailAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF94020F1ED6C5620019BF06 /* DetailAnnotationView.xib */; };
+		CF9402121ED6D4E00019BF06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402111ED6D4E00019BF06 /* Constants.swift */; };
+		CF9402151ED6DB9B0019BF06 /* ShortAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402141ED6DB9B0019BF06 /* ShortAnnotationView.swift */; };
+		CF9402171ED6DBA80019BF06 /* ShortAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9402161ED6DBA80019BF06 /* ShortAnnotationView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF4B384C1ED5BCAB00F7D794 /* ReverseGeocoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocoding.swift; sourceTree = "<group>"; };
 		CF4B384F1ED5C8F900F7D794 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
-		CF4B38511ED5C90100F7D794 /* AnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnotationView.xib; sourceTree = "<group>"; };
 		CF90BD251ED4882200735774 /* MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF90BD281ED4882200735774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF90BD2D1ED4882200735774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,11 @@
 		CF90BD431ED48A6200735774 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CF90BD451ED48AA600735774 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CF94020A1ED6B1EA0019BF06 /* UINib+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+Extensions.swift"; sourceTree = "<group>"; };
+		CF94020D1ED6C5390019BF06 /* DetailAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAnnotationView.swift; sourceTree = "<group>"; };
+		CF94020F1ED6C5620019BF06 /* DetailAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailAnnotationView.xib; sourceTree = "<group>"; };
+		CF9402111ED6D4E00019BF06 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CF9402141ED6DB9B0019BF06 /* ShortAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortAnnotationView.swift; sourceTree = "<group>"; };
+		CF9402161ED6DBA80019BF06 /* ShortAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortAnnotationView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				CF4B384F1ED5C8F900F7D794 /* AnnotationView.swift */,
-				CF4B38511ED5C90100F7D794 /* AnnotationView.xib */,
 			);
 			path = AnnotationView;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 			children = (
 				CF90BD471ED48C8F00735774 /* Extension */,
 				CF90BD3E1ED489D400735774 /* Protocol */,
+				CF9402111ED6D4E00019BF06 /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -139,6 +147,8 @@
 		CF90BD411ED48A4300735774 /* MapViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CF9402131ED6DB880019BF06 /* ShortAnnotationView */,
+				CF94020C1ED6C52F0019BF06 /* DetailAnnotationView */,
 				CF4B384E1ED5C8DC00F7D794 /* AnnotationView */,
 				CF90BD421ED48A5100735774 /* MapView */,
 				CF90BD431ED48A6200735774 /* MapViewController.swift */,
@@ -168,6 +178,24 @@
 				CF94020A1ED6B1EA0019BF06 /* UINib+Extensions.swift */,
 			);
 			path = UINib;
+			sourceTree = "<group>";
+		};
+		CF94020C1ED6C52F0019BF06 /* DetailAnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+				CF94020D1ED6C5390019BF06 /* DetailAnnotationView.swift */,
+				CF94020F1ED6C5620019BF06 /* DetailAnnotationView.xib */,
+			);
+			path = DetailAnnotationView;
+			sourceTree = "<group>";
+		};
+		CF9402131ED6DB880019BF06 /* ShortAnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+				CF9402141ED6DB9B0019BF06 /* ShortAnnotationView.swift */,
+				CF9402161ED6DBA80019BF06 /* ShortAnnotationView.xib */,
+			);
+			path = ShortAnnotationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9402171ED6DBA80019BF06 /* ShortAnnotationView.xib in Resources */,
 				CF90BD331ED4882200735774 /* LaunchScreen.storyboard in Resources */,
-				CF4B38521ED5C90100F7D794 /* AnnotationView.xib in Resources */,
 				CF90BD301ED4882200735774 /* Assets.xcassets in Resources */,
+				CF9402101ED6C5620019BF06 /* DetailAnnotationView.xib in Resources */,
 				CF90BD2E1ED4882200735774 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,11 +274,14 @@
 			files = (
 				CF90BD291ED4882200735774 /* AppDelegate.swift in Sources */,
 				CF4B384D1ED5BCAB00F7D794 /* ReverseGeocoding.swift in Sources */,
+				CF9402151ED6DB9B0019BF06 /* ShortAnnotationView.swift in Sources */,
 				CF94020B1ED6B1EA0019BF06 /* UINib+Extensions.swift in Sources */,
 				CF4B38501ED5C8F900F7D794 /* AnnotationView.swift in Sources */,
 				CF90BD461ED48AA600735774 /* MapView.swift in Sources */,
 				CF90BD401ED489F600735774 /* ViewControllerRootView.swift in Sources */,
+				CF94020E1ED6C5390019BF06 /* DetailAnnotationView.swift in Sources */,
 				CF90BD441ED48A6200735774 /* MapViewController.swift in Sources */,
+				CF9402121ED6D4E00019BF06 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
