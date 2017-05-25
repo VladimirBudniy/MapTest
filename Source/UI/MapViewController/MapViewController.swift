@@ -11,12 +11,12 @@ import UIKit
 import CoreLocation
 import MapKit
 class MapViewController: UIViewController, ViewControllerRootView, UIGestureRecognizerDelegate, LoadAnnotationDelegate {
-    
+
     typealias RootViewType = MapView
-    
+
     let constants = BarItems()
 
-    let model = ReverseGeocoding() // protocol method
+    let model = ReverseGeocoding() // for protocol
     
    // MARK: - View Lifecycle
     
@@ -33,10 +33,10 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
     private func settingNavigationBar() {
         let navigationItem = self.navigationItem
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: constants.appleMaps,
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: constants.mapBoxMaps,
                                                            style: .plain,
                                                            target: self,
-                                                           action: #selector(printAction))
+                                                           action: #selector(changeMapType))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: constants.detailType,
                                                             style: .plain,
                                                             target: self,
@@ -48,7 +48,7 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
         gesture.minimumPressDuration = 0.2
         gesture.delaysTouchesBegan = true
         gesture.delegate = self
-        self.rootView.defaultMapView?.addGestureRecognizer(gesture)
+        self.rootView.add(gesture)
     }
     
 //    // MARK: Handler method
@@ -73,11 +73,10 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
         }
     }
     
-    @objc private func printAction() {
+    @objc private func changeMapType() {
         let title = self.navigationItem.leftBarButtonItem?.title
-        self.navigationItem.leftBarButtonItem?.title = title == constants.appleMaps ? constants.mapBoxMaps : constants.appleMaps
-        
-        // change root mapView
+        self.rootView.setMapType(type: title == constants.mapBoxMaps ? MapType.mapbox : MapType.apple)
+        self.navigationItem.leftBarButtonItem?.title = title == constants.mapBoxMaps ? constants.appleMaps : constants.mapBoxMaps
     }
     
     @objc private func changeAnnotationViewType() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027C1DA0D19757D45C799FF5 /* Pods_MapTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841F2845F3A3EA71588B1FD6 /* Pods_MapTest.framework */; };
 		CF4B384D1ED5BCAB00F7D794 /* ReverseGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B384C1ED5BCAB00F7D794 /* ReverseGeocoding.swift */; };
 		CF4B38501ED5C8F900F7D794 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B384F1ED5C8F900F7D794 /* AnnotationView.swift */; };
 		CF90BD291ED4882200735774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD281ED4882200735774 /* AppDelegate.swift */; };
@@ -17,15 +18,18 @@
 		CF90BD441ED48A6200735774 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD431ED48A6200735774 /* MapViewController.swift */; };
 		CF90BD461ED48AA600735774 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD451ED48AA600735774 /* MapView.swift */; };
 		CF94020B1ED6B1EA0019BF06 /* UINib+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94020A1ED6B1EA0019BF06 /* UINib+Extensions.swift */; };
-		CF94020E1ED6C5390019BF06 /* DetailAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94020D1ED6C5390019BF06 /* DetailAnnotationView.swift */; };
-		CF9402101ED6C5620019BF06 /* DetailAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF94020F1ED6C5620019BF06 /* DetailAnnotationView.xib */; };
 		CF9402121ED6D4E00019BF06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402111ED6D4E00019BF06 /* Constants.swift */; };
-		CF9402151ED6DB9B0019BF06 /* ShortAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402141ED6DB9B0019BF06 /* ShortAnnotationView.swift */; };
-		CF9402171ED6DBA80019BF06 /* ShortAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9402161ED6DBA80019BF06 /* ShortAnnotationView.xib */; };
 		CF9402191ED6E4210019BF06 /* LoadAnnotationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402181ED6E4210019BF06 /* LoadAnnotationProtocol.swift */; };
+		CF9402221ED713CF0019BF06 /* DetailAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94021D1ED713CF0019BF06 /* DetailAnnotationView.swift */; };
+		CF9402231ED713CF0019BF06 /* DetailAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF94021E1ED713CF0019BF06 /* DetailAnnotationView.xib */; };
+		CF9402241ED713CF0019BF06 /* ShortAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402201ED713CF0019BF06 /* ShortAnnotationView.swift */; };
+		CF9402251ED713CF0019BF06 /* ShortAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9402211ED713CF0019BF06 /* ShortAnnotationView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24BD722B92BBF27CEE31B429 /* Pods-MapTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapTest/Pods-MapTest.debug.xcconfig"; sourceTree = "<group>"; };
+		841F2845F3A3EA71588B1FD6 /* Pods_MapTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E7079BD518E579A31117E0 /* Pods-MapTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapTest/Pods-MapTest.release.xcconfig"; sourceTree = "<group>"; };
 		CF4B384C1ED5BCAB00F7D794 /* ReverseGeocoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocoding.swift; sourceTree = "<group>"; };
 		CF4B384F1ED5C8F900F7D794 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		CF90BD251ED4882200735774 /* MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,12 +42,12 @@
 		CF90BD431ED48A6200735774 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CF90BD451ED48AA600735774 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CF94020A1ED6B1EA0019BF06 /* UINib+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+Extensions.swift"; sourceTree = "<group>"; };
-		CF94020D1ED6C5390019BF06 /* DetailAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAnnotationView.swift; sourceTree = "<group>"; };
-		CF94020F1ED6C5620019BF06 /* DetailAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailAnnotationView.xib; sourceTree = "<group>"; };
 		CF9402111ED6D4E00019BF06 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CF9402141ED6DB9B0019BF06 /* ShortAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortAnnotationView.swift; sourceTree = "<group>"; };
-		CF9402161ED6DBA80019BF06 /* ShortAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortAnnotationView.xib; sourceTree = "<group>"; };
 		CF9402181ED6E4210019BF06 /* LoadAnnotationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAnnotationProtocol.swift; sourceTree = "<group>"; };
+		CF94021D1ED713CF0019BF06 /* DetailAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAnnotationView.swift; sourceTree = "<group>"; };
+		CF94021E1ED713CF0019BF06 /* DetailAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailAnnotationView.xib; sourceTree = "<group>"; };
+		CF9402201ED713CF0019BF06 /* ShortAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortAnnotationView.swift; sourceTree = "<group>"; };
+		CF9402211ED713CF0019BF06 /* ShortAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortAnnotationView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,12 +55,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027C1DA0D19757D45C799FF5 /* Pods_MapTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		553443A101AA77BB3FD146B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				841F2845F3A3EA71588B1FD6 /* Pods_MapTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FF9C8BC78C0655FCD3AE154 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24BD722B92BBF27CEE31B429 /* Pods-MapTest.debug.xcconfig */,
+				B3E7079BD518E579A31117E0 /* Pods-MapTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF4B384B1ED5BC9E00F7D794 /* ReverseGeocoding */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +90,8 @@
 		CF4B384E1ED5C8DC00F7D794 /* AnnotationView */ = {
 			isa = PBXGroup;
 			children = (
+				CF94021C1ED713CF0019BF06 /* DetailAnnotationView */,
+				CF94021F1ED713CF0019BF06 /* ShortAnnotationView */,
 				CF4B384F1ED5C8F900F7D794 /* AnnotationView.swift */,
 			);
 			path = AnnotationView;
@@ -80,6 +104,8 @@
 				CF90BD3A1ED489A700735774 /* Source */,
 				CF90BD271ED4882200735774 /* MapTest */,
 				CF90BD261ED4882200735774 /* Products */,
+				6FF9C8BC78C0655FCD3AE154 /* Pods */,
+				553443A101AA77BB3FD146B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,8 +176,6 @@
 		CF90BD411ED48A4300735774 /* MapViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CF9402131ED6DB880019BF06 /* ShortAnnotationView */,
-				CF94020C1ED6C52F0019BF06 /* DetailAnnotationView */,
 				CF4B384E1ED5C8DC00F7D794 /* AnnotationView */,
 				CF90BD421ED48A5100735774 /* MapView */,
 				CF90BD431ED48A6200735774 /* MapViewController.swift */,
@@ -183,20 +207,20 @@
 			path = UINib;
 			sourceTree = "<group>";
 		};
-		CF94020C1ED6C52F0019BF06 /* DetailAnnotationView */ = {
+		CF94021C1ED713CF0019BF06 /* DetailAnnotationView */ = {
 			isa = PBXGroup;
 			children = (
-				CF94020D1ED6C5390019BF06 /* DetailAnnotationView.swift */,
-				CF94020F1ED6C5620019BF06 /* DetailAnnotationView.xib */,
+				CF94021D1ED713CF0019BF06 /* DetailAnnotationView.swift */,
+				CF94021E1ED713CF0019BF06 /* DetailAnnotationView.xib */,
 			);
 			path = DetailAnnotationView;
 			sourceTree = "<group>";
 		};
-		CF9402131ED6DB880019BF06 /* ShortAnnotationView */ = {
+		CF94021F1ED713CF0019BF06 /* ShortAnnotationView */ = {
 			isa = PBXGroup;
 			children = (
-				CF9402141ED6DB9B0019BF06 /* ShortAnnotationView.swift */,
-				CF9402161ED6DBA80019BF06 /* ShortAnnotationView.xib */,
+				CF9402201ED713CF0019BF06 /* ShortAnnotationView.swift */,
+				CF9402211ED713CF0019BF06 /* ShortAnnotationView.xib */,
 			);
 			path = ShortAnnotationView;
 			sourceTree = "<group>";
@@ -208,9 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF90BD371ED4882200735774 /* Build configuration list for PBXNativeTarget "MapTest" */;
 			buildPhases = (
+				B03E0D5C4B304BA7D1CCBF88 /* [CP] Check Pods Manifest.lock */,
 				CF90BD211ED4882200735774 /* Sources */,
 				CF90BD221ED4882200735774 /* Frameworks */,
 				CF90BD231ED4882200735774 /* Resources */,
+				CF6CB40ECAA7FDB05CEB8659 /* [CP] Embed Pods Frameworks */,
+				649C3581DD04EFF5DF06D6F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,30 +287,78 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF9402171ED6DBA80019BF06 /* ShortAnnotationView.xib in Resources */,
+				CF9402251ED713CF0019BF06 /* ShortAnnotationView.xib in Resources */,
 				CF90BD331ED4882200735774 /* LaunchScreen.storyboard in Resources */,
 				CF90BD301ED4882200735774 /* Assets.xcassets in Resources */,
-				CF9402101ED6C5620019BF06 /* DetailAnnotationView.xib in Resources */,
+				CF9402231ED713CF0019BF06 /* DetailAnnotationView.xib in Resources */,
 				CF90BD2E1ED4882200735774 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		649C3581DD04EFF5DF06D6F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapTest/Pods-MapTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B03E0D5C4B304BA7D1CCBF88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF6CB40ECAA7FDB05CEB8659 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapTest/Pods-MapTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF90BD211ED4882200735774 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9402241ED713CF0019BF06 /* ShortAnnotationView.swift in Sources */,
+				CF9402221ED713CF0019BF06 /* DetailAnnotationView.swift in Sources */,
 				CF90BD291ED4882200735774 /* AppDelegate.swift in Sources */,
 				CF4B384D1ED5BCAB00F7D794 /* ReverseGeocoding.swift in Sources */,
-				CF9402151ED6DB9B0019BF06 /* ShortAnnotationView.swift in Sources */,
 				CF94020B1ED6B1EA0019BF06 /* UINib+Extensions.swift in Sources */,
 				CF9402191ED6E4210019BF06 /* LoadAnnotationProtocol.swift in Sources */,
 				CF4B38501ED5C8F900F7D794 /* AnnotationView.swift in Sources */,
 				CF90BD461ED48AA600735774 /* MapView.swift in Sources */,
 				CF90BD401ED489F600735774 /* ViewControllerRootView.swift in Sources */,
-				CF94020E1ED6C5390019BF06 /* DetailAnnotationView.swift in Sources */,
 				CF90BD441ED48A6200735774 /* MapViewController.swift in Sources */,
 				CF9402121ED6D4E00019BF06 /* Constants.swift in Sources */,
 			);
@@ -406,6 +481,7 @@
 		};
 		CF90BD381ED4882200735774 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24BD722B92BBF27CEE31B429 /* Pods-MapTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -422,6 +498,7 @@
 		};
 		CF90BD391ED4882200735774 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3E7079BD518E579A31117E0 /* Pods-MapTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
