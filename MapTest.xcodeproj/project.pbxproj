@@ -22,6 +22,7 @@
 		CF9402121ED6D4E00019BF06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402111ED6D4E00019BF06 /* Constants.swift */; };
 		CF9402151ED6DB9B0019BF06 /* ShortAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402141ED6DB9B0019BF06 /* ShortAnnotationView.swift */; };
 		CF9402171ED6DBA80019BF06 /* ShortAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9402161ED6DBA80019BF06 /* ShortAnnotationView.xib */; };
+		CF9402191ED6E4210019BF06 /* LoadAnnotationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402181ED6E4210019BF06 /* LoadAnnotationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CF9402111ED6D4E00019BF06 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CF9402141ED6DB9B0019BF06 /* ShortAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortAnnotationView.swift; sourceTree = "<group>"; };
 		CF9402161ED6DBA80019BF06 /* ShortAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortAnnotationView.xib; sourceTree = "<group>"; };
+		CF9402181ED6E4210019BF06 /* LoadAnnotationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAnnotationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				CF90BD3F1ED489F600735774 /* ViewControllerRootView.swift */,
+				CF9402181ED6E4210019BF06 /* LoadAnnotationProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				CF4B384D1ED5BCAB00F7D794 /* ReverseGeocoding.swift in Sources */,
 				CF9402151ED6DB9B0019BF06 /* ShortAnnotationView.swift in Sources */,
 				CF94020B1ED6B1EA0019BF06 /* UINib+Extensions.swift in Sources */,
+				CF9402191ED6E4210019BF06 /* LoadAnnotationProtocol.swift in Sources */,
 				CF4B38501ED5C8F900F7D794 /* AnnotationView.swift in Sources */,
 				CF90BD461ED48AA600735774 /* MapView.swift in Sources */,
 				CF90BD401ED489F600735774 /* ViewControllerRootView.swift in Sources */,

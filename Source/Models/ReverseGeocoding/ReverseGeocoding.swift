@@ -9,9 +9,12 @@
 import Foundation
 import MapKit
 
-typealias placemark = (ReverseGeocoding) -> ()
+typealias placemark = (ReverseGeocoding) -> () //  handler method
 
 class ReverseGeocoding {
+    
+    var delegate: LoadAnnotationDelegate? //  protocol method
+    
     var coordinate: CLLocationCoordinate2D?
     var name: String?
     var streetName: String?
@@ -44,7 +47,7 @@ class ReverseGeocoding {
     
     // MARK: Class methods
     
-    static func geocodeModel(_ coordinate: CLLocationCoordinate2D?, handler: @escaping placemark) {
+    static func geocodeModel(_ coordinate: CLLocationCoordinate2D?, handler: @escaping placemark) { //  handler method
         guard let coordinate = coordinate else { return }
         let geocoder = CLGeocoder()
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
@@ -54,5 +57,19 @@ class ReverseGeocoding {
             }
         }
     }
+    
+    // MARK: Public methods
+    
+    func geocodeModel(_ coordinate: CLLocationCoordinate2D?) { //  protocol method
+        guard let coordinate = coordinate else { return }
+        let geocoder = CLGeocoder()
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        geocoder.reverseGeocodeLocation(location) {[weak self] (placemarks , error) in
+            if let placemarks = placemarks {
+                self?.delegate?.annotationLoaded(model: ReverseGeocoding(with: placemarks.first))
+            }
+        }
+    }
+    
     
 }

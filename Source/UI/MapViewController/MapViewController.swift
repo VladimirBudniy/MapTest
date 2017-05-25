@@ -10,17 +10,20 @@
 import UIKit
 import CoreLocation
 import MapKit
-class MapViewController: UIViewController, ViewControllerRootView, UIGestureRecognizerDelegate {
+class MapViewController: UIViewController, ViewControllerRootView, UIGestureRecognizerDelegate, LoadAnnotationDelegate {
     
     typealias RootViewType = MapView
     
     let constants = BarItems()
+
+    let model = ReverseGeocoding() // protocol method
     
    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.model.delegate = self
         self.settingNavigationBar()
         self.addLongPressGestureRecognizer()
     }
@@ -48,9 +51,15 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
         self.rootView.defaultMapView?.addGestureRecognizer(gesture)
     }
     
-    // MARK: Handler method
+//    // MARK: Handler method
+//    
+//    private func loadAnnotation(with model: ReverseGeocoding) {
+//        self.rootView.addAnnotationView(model: model)
+//    }
     
-    private func loadAnnotation(with model: ReverseGeocoding) {
+    // MARK: Protocol method
+    
+    func annotationLoaded(model: ReverseGeocoding) {
         self.rootView.addAnnotationView(model: model)
     }
     
@@ -59,7 +68,8 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
     @objc private func handleLongPress(gestureReconizer: UILongPressGestureRecognizer) {
         if gestureReconizer.state != .ended, gestureReconizer.state != .changed {
             let coordinate = self.rootView.getCurrentPoint(gestureReconizer: gestureReconizer)
-            ReverseGeocoding.geocodeModel(coordinate, handler: loadAnnotation)
+//            ReverseGeocoding.geocodeModel(coordinate, handler: loadAnnotation) //  handler method
+            self.model.geocodeModel(coordinate) //  handler method
         }
     }
     
