@@ -14,6 +14,4 @@ struct BarItems {
     
     var detailType = "Detail Inf."
     var shortType = "Short Inf."
-    
-    
 }

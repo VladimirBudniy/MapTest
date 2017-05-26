@@ -56,6 +56,20 @@ class MapView: UIView {
         }
     }
     
+    private func setMapCenter(_ model: ReverseGeocoding) {
+        switch self.mapType {
+        case .apple:
+            self.defaultMapView?.setCenter(model.coordinate!, animated: true)
+        default:
+            self.mapboxMapView?.setCenter(model.coordinate!, animated: true)
+        }
+    }
+    
+    private func viewCenter(for view: AnnotationView) -> CGPoint {
+        return CGPoint(x: (self.frame.size.width / 2),
+                       y: (self.frame.size.height / 2) - (view.frame.size.height / 2))
+    }
+    
     // MARK: Public methods
     
     func setMapType(type: MapType) {
@@ -103,18 +117,10 @@ class MapView: UIView {
     
     func addAnnotationView(model: ReverseGeocoding?) {
         if let model = model {
-            
-            switch self.mapType {
-            case .apple:
-                self.defaultMapView?.setCenter(model.coordinate!, animated: true)
-            default:
-                self.mapboxMapView?.setCenter(model.coordinate!, animated: true)
-            }
-
+            self.setMapCenter(model)
             guard let view = self.annotationView else {
                 if let view = self.createAnnotationView() {
-                    view.center = CGPoint(x: (self.frame.size.width / 2),
-                                          y: (self.frame.size.height / 2) - (view.frame.size.height / 2))
+                    view.center = self.viewCenter(for: view)
                     view.fillWith(model: model)
                     self.annotationView = view
                     self.addSubview(view)

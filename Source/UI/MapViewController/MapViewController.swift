@@ -59,7 +59,7 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
     
     // MARK: Protocol method
     
-    func annotationLoaded(model: ReverseGeocoding) {
+    func modelLoaded(model: ReverseGeocoding) {
         self.rootView.addAnnotationView(model: model)
     }
     

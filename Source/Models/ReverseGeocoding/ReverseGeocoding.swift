@@ -47,11 +47,10 @@ class ReverseGeocoding {
     
     // MARK: Class methods
     
-    static func geocodeModel(_ coordinate: CLLocationCoordinate2D?, handler: @escaping placemark) { //  handler method
+    static func geocodeModel(_ coordinate: CLLocationCoordinate2D?, handler: @escaping placemark) { // for handler method
         guard let coordinate = coordinate else { return }
-        let geocoder = CLGeocoder()
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        geocoder.reverseGeocodeLocation(location) { (placemarks , error) in
+        CLGeocoder().reverseGeocodeLocation(location) { (placemarks , error) in
             if let placemarks = placemarks {
                 handler(ReverseGeocoding(with: placemarks.first))
             }
@@ -60,13 +59,12 @@ class ReverseGeocoding {
     
     // MARK: Public methods
     
-    func geocodeModel(_ coordinate: CLLocationCoordinate2D?) { //  protocol method
+    func geocodeModel(_ coordinate: CLLocationCoordinate2D?) { // for protocol method
         guard let coordinate = coordinate else { return }
-        let geocoder = CLGeocoder()
         let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        geocoder.reverseGeocodeLocation(location) {[weak self] (placemarks , error) in
+        CLGeocoder().reverseGeocodeLocation(location) {[weak self] (placemarks , error) in
             if let placemarks = placemarks {
-                self?.delegate?.annotationLoaded(model: ReverseGeocoding(with: placemarks.first))
+                self?.delegate?.modelLoaded(model: ReverseGeocoding(with: placemarks.first))
             }
         }
     }
