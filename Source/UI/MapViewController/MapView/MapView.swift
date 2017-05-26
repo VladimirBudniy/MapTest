@@ -8,18 +8,7 @@
 
 import UIKit
 import MapKit
-
 import Mapbox
-
-enum AnnotationViewType {
-    case short
-    case detail
-}
-
-enum MapType {
-    case apple
-    case mapbox
-}
 
 class MapView: UIView {
     
@@ -37,7 +26,62 @@ class MapView: UIView {
         self.mapboxMapView?.removeFromSuperview()
     }
     
+    // MARK: Public methods
+    
+    func setMapType(type: MapType) {
+        self.mapType = type
+        self.viewForType(type: type)
+    }
+    
+    func setAnnotationViewType(type: AnnotationViewType) {
+        self.annotationViewType = type
+    }
+    
+    func add(_ gestureReconizer: UILongPressGestureRecognizer) {
+        self.gestureRecognizer = gestureReconizer
+        self.defaultMapView?.addGestureRecognizer(gestureReconizer)
+    }
+
+    func getCurrentPoint(gestureReconizer: UILongPressGestureRecognizer) -> CLLocationCoordinate2D {
+        self.dismissAnnotationView()
+        return self.coordinate(for: self.currentPoint(for: gestureReconizer))
+    }
+    
+    func dismissAnnotationView() {
+        self.annotationView?.removeFromSuperview()
+        self.annotationView = nil
+    }
+    
+    func addAnnotationView(model: ReverseGeocoding?) {
+        if let model = model {
+            guard let view = self.annotationView else {
+                if let view = self.createAnnotationView() {
+                    view.center = self.viewCenter(for: view)
+                    view.fillWith(model: model)
+                    self.annotationView = view
+                    self.addSubview(view)
+                }
+                
+                return
+            }
+            
+            view.fillWith(model: model)
+            self.addSubview(view)
+        }
+    }
+    
     // MARK: Private methods
+    
+    private func viewForType(type: MapType) {
+        switch type {
+        case .apple:
+            self.defaultMapView = MKMapView(frame: (self.mapboxMapView?.frame)!)
+            self.change(self.mapboxMapView, with: self.defaultMapView)
+        default:
+            self.mapboxMapView = MGLMapView(frame: (self.defaultMapView?.frame)!)
+            self.change(self.defaultMapView, with: self.mapboxMapView)
+        }
+    }
     
     private func createAnnotationView() -> AnnotationView? {
         return self.annotationViewType == .short
@@ -56,81 +100,25 @@ class MapView: UIView {
         }
     }
     
-    private func setMapCenter(_ model: ReverseGeocoding) {
-        switch self.mapType {
-        case .apple:
-            self.defaultMapView?.setCenter(model.coordinate!, animated: true)
-        default:
-            self.mapboxMapView?.setCenter(model.coordinate!, animated: true)
-        }
-    }
-    
     private func viewCenter(for view: AnnotationView) -> CGPoint {
         return CGPoint(x: (self.frame.size.width / 2),
                        y: (self.frame.size.height / 2) - (view.frame.size.height / 2))
     }
     
-    // MARK: Public methods
-    
-    func setMapType(type: MapType) {
-        self.mapType = type
-        switch type {
-        case .apple:
-            self.defaultMapView = MKMapView(frame: (self.mapboxMapView?.frame)!)
-            self.change(self.mapboxMapView, with: self.defaultMapView)
-        default:
-            self.mapboxMapView = MGLMapView(frame: (self.defaultMapView?.frame)!)
-            self.change(self.defaultMapView, with: self.mapboxMapView)
-        }
-    }
-    
-    func setAnnotationViewType(type: AnnotationViewType) {
-        self.annotationViewType = type
-    }
-    
-    func add(_ gestureReconizer: UILongPressGestureRecognizer) {
-        self.gestureRecognizer = gestureReconizer
-        self.defaultMapView?.addGestureRecognizer(gestureReconizer)
-    }
-
-    func getCurrentPoint(gestureReconizer: UILongPressGestureRecognizer) -> CLLocationCoordinate2D {
-        self.dismissAnnotationView()
-        
-        let currentPoint = self.mapType == .apple
+    private func currentPoint(for gestureReconizer: UILongPressGestureRecognizer) -> CGPoint {
+        return self.mapType == .apple
             ? gestureReconizer.location(in: self.defaultMapView)
             : gestureReconizer.location(in: self.mapboxMapView)
-        
+    }
+    
+    private func coordinate(for point: CGPoint) -> CLLocationCoordinate2D {
         switch self.mapType {
         case .apple:
             let mapView = self.defaultMapView
-            return mapView!.convert(currentPoint, toCoordinateFrom: mapView)
+            return mapView!.convert(point, toCoordinateFrom: mapView)
         default:
             let mapView = self.mapboxMapView
-            return mapView!.convert(currentPoint, toCoordinateFrom: mapView)
-        }
-    }
-    
-    func dismissAnnotationView() {
-        self.annotationView?.removeFromSuperview()
-        self.annotationView = nil
-    }
-    
-    func addAnnotationView(model: ReverseGeocoding?) {
-        if let model = model {
-            self.setMapCenter(model)
-            guard let view = self.annotationView else {
-                if let view = self.createAnnotationView() {
-                    view.center = self.viewCenter(for: view)
-                    view.fillWith(model: model)
-                    self.annotationView = view
-                    self.addSubview(view)
-                }
-                
-                return
-            }
-            
-            view.fillWith(model: model)
-            self.addSubview(view)
+            return mapView!.convert(point, toCoordinateFrom: mapView)
         }
     }
 }

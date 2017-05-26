@@ -8,6 +8,16 @@
 
 import Foundation
 
+enum AnnotationViewType {
+    case short
+    case detail
+}
+
+enum MapType {
+    case apple
+    case mapbox
+}
+
 struct BarItems {
     var appleMaps = "Apple maps"
     var mapBoxMaps = "MapBox maps"
