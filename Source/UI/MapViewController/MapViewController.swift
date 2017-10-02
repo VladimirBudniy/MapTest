@@ -53,13 +53,13 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
     
 //    // MARK: Handler method
 //    
-//    private func loadAnnotation(with model: ReverseGeocoding) {
+//    private func loadAnnotation(with model: GeocodingModel) {
 //        self.rootView.addAnnotationView(model: model)
 //    }
     
     // MARK: Protocol method
     
-    func modelLoaded(model: ReverseGeocoding) {
+    func modelLoaded(model: GeocodingModel) {
         self.rootView.addAnnotationView(model: model)
     }
     
@@ -68,7 +68,7 @@ class MapViewController: UIViewController, ViewControllerRootView, UIGestureReco
     @objc private func handleLongPress(gestureReconizer: UILongPressGestureRecognizer) {
         if gestureReconizer.state != .ended, gestureReconizer.state != .changed {
             let coordinate = self.rootView.getCurrentPoint(gestureReconizer: gestureReconizer)
-//            ReverseGeocoding.geocodeModel(coordinate, handler: loadAnnotation) //  handler method
+//            ReverseGeocoding().geocodeModel(coordinate, handler: loadAnnotation) //  handler method
             self.model.geocodeModel(coordinate) //  handler method
         }
     }

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol LoadAnnotationDelegate: class {
-    func modelLoaded(model: ReverseGeocoding)
+    func modelLoaded(model: GeocodingModel)
 }

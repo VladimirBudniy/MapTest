@@ -26,7 +26,7 @@ class MapView: UIView {
         self.mapboxMapView?.removeFromSuperview()
     }
     
-    // MARK: Public methods
+    // MARK: Accessors
     
     func setMapType(type: MapType) {
         self.mapType = type
@@ -36,6 +36,8 @@ class MapView: UIView {
     func setAnnotationViewType(type: AnnotationViewType) {
         self.annotationViewType = type
     }
+    
+    // MARK: Public methods
     
     func add(_ gestureReconizer: UILongPressGestureRecognizer) {
         self.gestureRecognizer = gestureReconizer
@@ -52,7 +54,7 @@ class MapView: UIView {
         self.annotationView = nil
     }
     
-    func addAnnotationView(model: ReverseGeocoding?) {
+    func addAnnotationView(model: GeocodingModel?) {
         if let model = model {
             guard let view = self.annotationView else {
                 if let view = self.createAnnotationView() {
@@ -100,7 +102,7 @@ class MapView: UIView {
         }
     }
     
-    private func viewCenter(for view: AnnotationView) -> CGPoint {
+    private func viewCenter<T: UIView>(for view: T) -> CGPoint {
         return CGPoint(x: (self.frame.size.width / 2),
                        y: (self.frame.size.height / 2) - (view.frame.size.height / 2))
     }

@@ -14,7 +14,7 @@ class ShortAnnotationView: AnnotationView {
     
     @IBOutlet var cancelButton: UIButton?
     
-    override func fillWith(model: ReverseGeocoding?) {
+    override func fillWith(model: GeocodingModel?) {
         self.cityName?.text = model?.city
         self.countryName?.text = model?.country
         

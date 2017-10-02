@@ -21,7 +21,7 @@ class DetailAnnotationView: AnnotationView {
     
     @IBOutlet var cancelButton: UIButton?
     
-    override func fillWith(model: ReverseGeocoding?) {
+    override func fillWith(model: GeocodingModel?) {
         self.placeName?.text = model?.name
         self.cityName?.text = model?.city
         self.streetName?.text = model?.streetName
@@ -43,5 +43,4 @@ class DetailAnnotationView: AnnotationView {
             self.waterPlace?.text = model?.inlandWater
         }
     }
-
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		027C1DA0D19757D45C799FF5 /* Pods_MapTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841F2845F3A3EA71588B1FD6 /* Pods_MapTest.framework */; };
 		CF4B384D1ED5BCAB00F7D794 /* ReverseGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B384C1ED5BCAB00F7D794 /* ReverseGeocoding.swift */; };
-		CF4B38501ED5C8F900F7D794 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B384F1ED5C8F900F7D794 /* AnnotationView.swift */; };
 		CF90BD291ED4882200735774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF90BD281ED4882200735774 /* AppDelegate.swift */; };
 		CF90BD2E1ED4882200735774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF90BD2C1ED4882200735774 /* Main.storyboard */; };
 		CF90BD301ED4882200735774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF90BD2F1ED4882200735774 /* Assets.xcassets */; };
@@ -24,6 +23,8 @@
 		CF9402231ED713CF0019BF06 /* DetailAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF94021E1ED713CF0019BF06 /* DetailAnnotationView.xib */; };
 		CF9402241ED713CF0019BF06 /* ShortAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9402201ED713CF0019BF06 /* ShortAnnotationView.swift */; };
 		CF9402251ED713CF0019BF06 /* ShortAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9402211ED713CF0019BF06 /* ShortAnnotationView.xib */; };
+		CFE72C011F822404000A714B /* GeocodingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE72C001F822404000A714B /* GeocodingModel.swift */; };
+		CFE72C071F825888000A714B /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE72C061F825888000A714B /* AnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,6 @@
 		841F2845F3A3EA71588B1FD6 /* Pods_MapTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7079BD518E579A31117E0 /* Pods-MapTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapTest/Pods-MapTest.release.xcconfig"; sourceTree = "<group>"; };
 		CF4B384C1ED5BCAB00F7D794 /* ReverseGeocoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocoding.swift; sourceTree = "<group>"; };
-		CF4B384F1ED5C8F900F7D794 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 		CF90BD251ED4882200735774 /* MapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF90BD281ED4882200735774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF90BD2D1ED4882200735774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +48,8 @@
 		CF94021E1ED713CF0019BF06 /* DetailAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailAnnotationView.xib; sourceTree = "<group>"; };
 		CF9402201ED713CF0019BF06 /* ShortAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortAnnotationView.swift; sourceTree = "<group>"; };
 		CF9402211ED713CF0019BF06 /* ShortAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShortAnnotationView.xib; sourceTree = "<group>"; };
+		CFE72C001F822404000A714B /* GeocodingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingModel.swift; sourceTree = "<group>"; };
+		CFE72C061F825888000A714B /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,7 @@
 			children = (
 				CF94021C1ED713CF0019BF06 /* DetailAnnotationView */,
 				CF94021F1ED713CF0019BF06 /* ShortAnnotationView */,
-				CF4B384F1ED5C8F900F7D794 /* AnnotationView.swift */,
+				CFE72C061F825888000A714B /* AnnotationView.swift */,
 			);
 			path = AnnotationView;
 			sourceTree = "<group>";
@@ -149,6 +151,7 @@
 		CF90BD3C1ED489C100735774 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CFE72BFF1F8223F8000A714B /* GeocodingModel */,
 				CF4B384B1ED5BC9E00F7D794 /* ReverseGeocoding */,
 			);
 			path = Models;
@@ -225,6 +228,14 @@
 			path = ShortAnnotationView;
 			sourceTree = "<group>";
 		};
+		CFE72BFF1F8223F8000A714B /* GeocodingModel */ = {
+			isa = PBXGroup;
+			children = (
+				CFE72C001F822404000A714B /* GeocodingModel.swift */,
+			);
+			path = GeocodingModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,11 +266,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Vladimir Budniy";
 				TargetAttributes = {
 					CF90BD241ED4882200735774 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -325,7 +337,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CF6CB40ECAA7FDB05CEB8659 /* [CP] Embed Pods Frameworks */ = {
@@ -356,11 +368,12 @@
 				CF4B384D1ED5BCAB00F7D794 /* ReverseGeocoding.swift in Sources */,
 				CF94020B1ED6B1EA0019BF06 /* UINib+Extensions.swift in Sources */,
 				CF9402191ED6E4210019BF06 /* LoadAnnotationProtocol.swift in Sources */,
-				CF4B38501ED5C8F900F7D794 /* AnnotationView.swift in Sources */,
+				CFE72C071F825888000A714B /* AnnotationView.swift in Sources */,
 				CF90BD461ED48AA600735774 /* MapView.swift in Sources */,
 				CF90BD401ED489F600735774 /* ViewControllerRootView.swift in Sources */,
 				CF90BD441ED48A6200735774 /* MapViewController.swift in Sources */,
 				CF9402121ED6D4E00019BF06 /* Constants.swift in Sources */,
+				CFE72C011F822404000A714B /* GeocodingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +409,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -404,7 +419,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -446,7 +465,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -454,7 +475,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -492,7 +517,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = VB.MapTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -509,7 +535,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = VB.MapTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
